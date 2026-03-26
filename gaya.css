@@ -61,7 +61,7 @@
             text-decoration:none;
             color:white;
             position:relative;
-            left:-100px; 
+            left:0px; 
             white-space:nowrap; 
             }
     
@@ -119,9 +119,8 @@
     }
     
     .hero-content h1{
-    font-size:4rem;
-    font-weight:700;
-    }
+    font-size: clamp(1.8rem, 5vw, 4rem);
+}
     
     .slogan{
     font-size:1.5rem;
@@ -1068,9 +1067,82 @@ footer {
       align-items: center;
     }
   }
-  @media (max-width: 768px) {
-    #pilihStruktur {
-      font-size: 16px;
-      padding: 14px 20px;
-    }
+ @media (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo {
+    left: 0;
+    font-size: 1.2rem;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .slogan {
+    font-size: 1rem;
+  }
+
+  /* LOGO */
+  .logo-kiri,
+  .logo-kanan {
+    position: static;
+    width: 70px;
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* SEARCH */
+  #search-section {
+    position: static;
+    transform: none;
+    width: 90%;
+    margin: auto;
+  }
+
+  /* GRID KEGIATAN */
+  .kegiatan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* STRUKTUR */
+  .struktur-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* CARD */
+  .profil-card,
+  .struktur-card {
+    width: 90%;
+  }
+
+  /* JUDUL */
+  #profil h2,
+  #struktur h2,
+  #tugas h2,
+  #aspirasi h2 {
+    font-size: 2rem;
+  }
+
+  /* BUTTON KEGIATAN */
+  .periode-filter button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+     body {
+  overflow-x: hidden;
+}
   }
