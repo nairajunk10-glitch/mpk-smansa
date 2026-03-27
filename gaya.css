@@ -531,12 +531,13 @@
         .logo-kiri {
             left: 40px;
             width: 90px;
+            top: 30%;
         }
         
         .logo-kanan {
             right: 40px;
             width: 120px;
-            top: 25%;
+            top: 30%;
         }
         
         @keyframes float {
