@@ -379,13 +379,7 @@ nav {
 @media (max-width: 768px) { 
     .kegiatan-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows:180px; } 
     .hero-logo { position: static; display: block; text-align: center; padding:10px 0; }
-    .logo-kiri,
-.logo-kanan {
-    width: 90px;
-    height: auto;
-    animation: float 4s ease-in-out infinite;
-}
-
+    .logo-kiri,.logo-kanan { width:60px; margin:10px auto; transform:none; animation: float 4s ease-in-out infinite; }
     #search-section { position: static; transform:none; margin:20px auto 0 auto; width:90%; }
     .hero-content h1 { font-size:1.8rem; }
     .hero-content .slogan { font-size:1.2rem; }
