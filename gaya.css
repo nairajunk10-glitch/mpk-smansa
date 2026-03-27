@@ -83,11 +83,12 @@ nav {
     background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85));
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    margin-top: 80px;
+    margin-top: 80px; /* space untuk header */
     overflow: hidden;
 }
 
@@ -108,20 +109,18 @@ nav {
     position: relative;
     z-index: 2;
 }
-
 .hero-content h1 {
     font-size: clamp(1.8rem, 5vw, 4rem);
 }
-
 .hero-content .slogan {
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
-/* HERO LOGO */
+/* Hero logos kiri dan kanan */
 .hero-logo {
     position: absolute;
-    top: 20%;
+    top: 10%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -130,7 +129,8 @@ nav {
     z-index: 2;
 }
 
-.logo-kiri, .logo-kanan {
+.logo-kiri,
+.logo-kanan {
     width: 90px;
     height: auto;
     animation: float 4s ease-in-out infinite;
@@ -141,6 +141,7 @@ nav {
     50% { transform: translateY(-8px); }
     100% { transform: translateY(0); }
 }
+
 
 /* SEARCH BAR */
 #search-section {
@@ -378,9 +379,26 @@ nav {
 @media (max-width: 1024px) { .kegiatan-grid { grid-template-columns: repeat(3,1fr); grid-auto-rows:180px; } }
 @media (max-width: 768px) { 
     .kegiatan-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows:180px; } 
-    .hero-logo { position: static; display: block; text-align: center; padding:10px 0; }
-    .logo-kiri,.logo-kanan { width:60px; margin:10px auto; transform:none; animation: float 4s ease-in-out infinite; }
-    #search-section { position: static; transform:none; margin:20px auto 0 auto; width:90%; }
+    ..hero-logo { 
+    position: static; 
+    display: flex; /* ubah dari block ke flex biar logo sejajar */
+    justify-content: center; /* logo di tengah */
+    gap: 40px; /* jarak antar logo */
+    padding: 10px 0; 
+}
+.logo-kiri,
+.logo-kanan { 
+    width: 60px; 
+    margin: 0; /* hapus margin auto, pakai gap flex */
+    transform: none; 
+    animation: float 4s ease-in-out infinite; 
+}
+   #search-section { 
+    position: static; 
+    transform: none; 
+    margin: 20px auto 0 auto; 
+    width: 90%; 
+}
     .hero-content h1 { font-size:1.8rem; }
     .hero-content .slogan { font-size:1.2rem; }
 }
