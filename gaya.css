@@ -524,6 +524,8 @@
             top: 20%;
             transform: translateY(0);
             animation: float 4s ease-in-out infinite;
+            height: auto;       
+            object-fit: contain;
         }
         
         .logo-kiri {
