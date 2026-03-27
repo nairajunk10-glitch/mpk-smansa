@@ -532,14 +532,14 @@
 .logo-kiri {
     left: 40px;
     width: 90px;
-    top: calc(80px + 20px); /* 80px = navbar height, 20px = jarak tambahan */
+    top: calc(80px + 20px); 
 }
 
 /* LOGO KANAN */
 .logo-kanan {
     right: 40px;
     width: 120px;
-    top: calc(80px + 20px);
+    top: calc(80px + 40px); 
 }
            @keyframes float {
             0% { transform: translateY(0); }
