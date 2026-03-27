@@ -518,7 +518,8 @@
             height: auto;
         }
         
- .logo-kiri,
+ /* ===== HERO LOGO SAFE ===== */
+.logo-kiri,
 .logo-kanan {
     position: absolute;
     transform: translateY(0);
@@ -532,44 +533,37 @@
 .logo-kiri {
     left: 40px;
     width: 90px;
-    top: calc(80px + 20px); 
+    top: 120px; /* jarak dari navbar */
 }
 
 /* LOGO KANAN */
 .logo-kanan {
     right: 40px;
     width: 120px;
-    top: calc(80px + 40px); 
+    top: 140px; /* lebih rendah dari kiri supaya ga ketutupan */
 }
-           @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-            100% { transform: translateY(0); }
-        }
-        
-       /* ===== RESPONSIVE HERO LOGO SAFE ===== */
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 1024px) {
-    .logo-kiri { width: 80px; top: calc(80px + 10px); }  /* 80px = navbar */
-    .logo-kanan { width: 100px; top: calc(80px + 10px); }
-    .hero-content h1 { font-size: 3.2rem; }
-    .slogan { font-size: 1.3rem; }
-    .cta-button { padding: 0.8rem 2rem; font-size: 0.95rem; }
+    .logo-kiri { width: 80px; top: 110px; }
+    .logo-kanan { width: 100px; top: 130px; }
 }
 
 @media screen and (max-width: 768px) {
-    .logo-kiri { width: 70px; top: calc(60px + 10px); }  /* navbar lebih kecil */
-    .logo-kanan { width: 85px; top: calc(60px + 10px); }
-    .hero-content h1 { font-size: 2.5rem; }
-    .slogan { font-size: 1.1rem; }
-    .cta-button { padding: 0.7rem 1.8rem; font-size: 0.9rem; }
+    .logo-kiri { width: 70px; top: 90px; }
+    .logo-kanan { width: 85px; top: 110px; }
 }
 
 @media screen and (max-width: 480px) {
-    .logo-kiri { width: 60px; top: calc(50px + 10px); }
-    .logo-kanan { width: 75px; top: calc(50px + 10px); }
-    .hero-content h1 { font-size: 2rem; }
-    .slogan { font-size: 1rem; }
-    .cta-button { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
+    .logo-kiri { width: 60px; top: 70px; }
+    .logo-kanan { width: 75px; top: 90px; }
 }
         tugas-section { padding: 60px 1rem 80px; }
         .tugas-timeline { padding-left: 20px; }
