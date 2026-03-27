@@ -120,6 +120,15 @@
     
     .hero-content h1{
     font-size: clamp(1.8rem, 5vw, 4rem);
+        @media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2 {
+    font-size: 1.8rem !important;
+  }
+}
 }
     
     .slogan{
@@ -466,8 +475,14 @@
                     50%{transform:translateY(-50%) translateY(-8px);}
                     100%{transform:translateY(-50%) translateY(0);}
                     }
-                    .logo-kiri,
-                    .logo-kanan{
+                   @media (max-width: 768px) {
+        .logo-kiri,
+        .logo-kanan {
+         position: static;
+         transform: none;
+         display: block;
+         margin: 10px auto;
+  }
                     animation:float 4s ease-in-out infinite;
                     }
                     .tugas-section{
@@ -539,6 +554,10 @@
                         #search-section{
                             padding:50px 0; 
                             color:white;
+                            position: static;
+                            transform: none;
+                            width: 90%;
+                            margin: auto;
                         }
                         
                         .search-bar input{
@@ -573,11 +592,14 @@
                             background:#fff;
                             color:#8B0000;
                           }
-                          
-                          .kegiatan-grid{
+
+                          @media (max-width: 768px) {
+                          .kegiatan-grid {
                             display:grid;
                             grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+                               grid-template-columns: 1fr !important;
                             gap:20px;
+                           }
                           }
                           
                           .kegiatan-card{
@@ -1075,6 +1097,12 @@ footer {
     gap: 10px;
     align-items: center;
   }
+     @media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
   .logo {
     left: 0;
@@ -1146,3 +1174,5 @@ footer {
   overflow-x: hidden;
 }
   }
+@media (max-width: 768px) {
+}
