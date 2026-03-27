@@ -518,58 +518,59 @@
             height: auto;
         }
         
-        .logo-kiri,
-        .logo-kanan {
-            position: absolute;
-            top: 20%;
-            transform: translateY(0);
-            animation: float 4s ease-in-out infinite;
-            height: auto;       
-            object-fit: contain;
-        }
-        
-        .logo-kiri {
-            left: 40px;
-            width: 90px;
-            top: 40%;
-        }
-        
-        .logo-kanan {
-            right: 40px;
-            width: 120px;
-            top: 40%;
-        }
-        
-        @keyframes float {
+ .logo-kiri,
+.logo-kanan {
+    position: absolute;
+    transform: translateY(0);
+    animation: float 4s ease-in-out infinite;
+    height: auto;
+    object-fit: contain;
+    z-index: 10; /* pastikan lebih tinggi dari navbar */
+}
+
+/* LOGO KIRI */
+.logo-kiri {
+    left: 40px;
+    width: 90px;
+    top: calc(80px + 20px); /* 80px = navbar height, 20px = jarak tambahan */
+}
+
+/* LOGO KANAN */
+.logo-kanan {
+    right: 40px;
+    width: 120px;
+    top: calc(80px + 20px);
+}
+           @keyframes float {
             0% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
             100% { transform: translateY(0); }
         }
         
-        /* ===== RESPONSIVE HERO LOGO ===== */
-        @media screen and (max-width: 1024px) {
-            .logo-kiri { width: 80px; top: 18%; }
-            .logo-kanan { width: 100px; top: 18%; }
-            .hero-content h1 { font-size: 3.2rem; }
-            .slogan { font-size: 1.3rem; }
-            .cta-button { padding: 0.8rem 2rem; font-size: 0.95rem; }
-        }
-        
-        @media screen and (max-width: 768px) {
-            .logo-kiri { width: 70px; top: 15%; }
-            .logo-kanan { width: 85px; top: 15%; }
-            .hero-content h1 { font-size: 2.5rem; }
-            .slogan { font-size: 1.1rem; }
-            .cta-button { padding: 0.7rem 1.8rem; font-size: 0.9rem; }
-        }
-        
-        @media screen and (max-width: 480px) {
-            .logo-kiri { width: 60px; top: 10%; }
-            .logo-kanan { width: 75px; top: 10%; }
-            .hero-content h1 { font-size: 2rem; }
-            .slogan { font-size: 1rem; }
-            .cta-button { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
-        }
+       /* ===== RESPONSIVE HERO LOGO SAFE ===== */
+@media screen and (max-width: 1024px) {
+    .logo-kiri { width: 80px; top: calc(80px + 10px); }  /* 80px = navbar */
+    .logo-kanan { width: 100px; top: calc(80px + 10px); }
+    .hero-content h1 { font-size: 3.2rem; }
+    .slogan { font-size: 1.3rem; }
+    .cta-button { padding: 0.8rem 2rem; font-size: 0.95rem; }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-kiri { width: 70px; top: calc(60px + 10px); }  /* navbar lebih kecil */
+    .logo-kanan { width: 85px; top: calc(60px + 10px); }
+    .hero-content h1 { font-size: 2.5rem; }
+    .slogan { font-size: 1.1rem; }
+    .cta-button { padding: 0.7rem 1.8rem; font-size: 0.9rem; }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-kiri { width: 60px; top: calc(50px + 10px); }
+    .logo-kanan { width: 75px; top: calc(50px + 10px); }
+    .hero-content h1 { font-size: 2rem; }
+    .slogan { font-size: 1rem; }
+    .cta-button { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
+}
         tugas-section { padding: 60px 1rem 80px; }
         .tugas-timeline { padding-left: 20px; }
         .tugas-item span { font-size: 18px; min-width: 35px; }
