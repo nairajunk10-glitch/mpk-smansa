@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="gaya.css">
 <meta charset="UTF-8">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MPK SMAN 1 Sungailiat - 2 Rasa 1 Cerita, Kerja Kita Kebanggaan Kita</title>
@@ -25,7 +26,9 @@
         <img src="20260315_014405_0000.png" class="logo-nav">
         MPK SMAN 1 Sungailiat
         </a>
-
+        <div class="menu-toggle" onclick="toggleMenu()">
+          ☰
+        </div>
 <ul class="nav-links">
 <li><a href="#home">BERANDA</a></li>
 <li><a href="#profil">PROFIL</a></li>
@@ -39,10 +42,8 @@
 </header>
 
 <section id="home" class="hero">
-    <div class="hero-logo">
-  <img src="20260315_014929_0000.png" class="logo-kiri" alt="Logo Kiri">
-  <img src="20260315_014405_0000.png" class="logo-kanan" alt="Logo Kanan">
-</div>
+    <img src="20260315_014929_0000.png" class="logo-kiri">
+    <img src="20260315_014405_0000.png" class="logo-kanan">
 
     <div id="search-section">
         <div class="search-bar">
@@ -91,7 +92,10 @@
 
 <h2 data-aos="fade-down">PROFIL MPK SMANSA</h2>
 
-<div class="profil-grid">
+<button class="arrow left" onclick="prevSlide()">←</button>
+
+<div class="profil-slider"> <!-- TAMBAH INI -->
+  <div class="profil-grid">
 
 
 <div class="profil-card item-search" data-aos="fade-up">
@@ -148,8 +152,10 @@ Anggaran Dasar dan Anggaran Rumah Tangga yang menjadi pedoman kerja MPK masa bak
 </p>
 
 </div>
+</div> <!-- TAMBAH INI -->
 
-</div>
+<button class="arrow right" onclick="nextSlide()">→</button>
+
 </div>
 </section>
 
@@ -337,8 +343,7 @@ Anggaran Dasar dan Anggaran Rumah Tangga yang menjadi pedoman kerja MPK masa bak
           
       <section class="kegiatan-section" id="kegiatan">
         <h2 class="kegiatan-title">KEGIATAN MPK SMANSA</h2> 
-      
-        <div class="periode-filter">
+    
           <div class="periode-filter">
             <button onclick="showPeriode('p1')">2025/2026</button>
             <button onclick="showPeriode('p2')">2026/2027</button>
@@ -444,10 +449,9 @@ Anggaran Dasar dan Anggaran Rumah Tangga yang menjadi pedoman kerja MPK masa bak
             <a href="https://www.tiktok.com/@mpkosis.smansasungailiat?_r=1&_t=ZS-94iJ7AEd1M1" target="_blank"><i class="fab fa-tiktok"></i></a>
           </div>
       
-          <p>© 2026 MPK SMAN 1 Sungailiat</p>
+          <p>Copyright © 2026 MPK SMAN 1 Sungailiat</p>
         </div>
       </footer>
-
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
