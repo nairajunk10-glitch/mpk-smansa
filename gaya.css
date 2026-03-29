@@ -1955,3 +1955,8 @@ text-align-last: center;
     }
   }
 }
+.container {
+    background-color: #ffffff !important; /* Paksa putih */
+    color: #000000 !important;           /* Paksa teks judul hitam */
+    color-scheme: light !important;      /* Beritahu HP ini mode terang */
+}
