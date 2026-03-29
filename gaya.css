@@ -1670,35 +1670,25 @@ text-align-last: center;
   }
 }
 @media screen and (max-width: 768px) {
-    .kegiatan-section::before {
-      content: "" !important;
-      position: absolute !important;
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important;
-      
-      /* 1. Ganti URL ke jalur yang lebih aman (pastikan nama file benar) */
-      background: url('bg2.png') no-repeat center center !important;
-      
-      /* 2. Gunakan 'cover' agar menutupi seluruh layar HP */
-      background-size: cover !important; 
-      
-      /* 3. UBAH DARI 'fixed' MENJADI 'scroll' (OBAT PALING AMPUH) */
-      background-attachment: scroll !important; 
-      
-      background-color: #fff !important; 
-      opacity: 0.15 !important;
-      z-index: 0 !important;
-      display: block !important;
-    }
-  
-    /* Tambahkan ini agar section-nya sadar kalau dia punya anak absolute */
-    .kegiatan-section {
-      position: relative !important;
-      z-index: 1 !important;
-    }
+   .kegiatan-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: url('bg2.png') no-repeat center center;
+    background-size: contain !important; 
+    
+    
+    background-attachment: fixed; 
+    
+    background-color: #fff; 
+    opacity: 0.15;
+    z-index: 0;
   }
+}
 /* ===================================================
    FIX TOTAL: ASPIRASI KHUSUS HP (ANTI BOCOR LAPTOP)
    =================================================== */
