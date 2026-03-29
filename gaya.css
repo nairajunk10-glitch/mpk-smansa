@@ -1954,14 +1954,3 @@ text-align-last: center;
     }
   }
 }
-.container {
-    background-color: #ffffff !important; /* Paksa putih */
-    color: #000000 !important;           /* Paksa teks judul hitam */
-    color-scheme: light !important;      /* Beritahu HP ini mode terang */
-}
-.profil-card {
-    background-color: #ffffff !important;
-    color: #333333 !important;           /* Warna teks isi kartu */
-    forced-color-adjust: none !important; /* Kunci agar warna tidak dibalik HP */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important; /* Pastikan bayangan tetap ada */
-}
