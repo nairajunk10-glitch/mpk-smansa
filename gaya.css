@@ -1,8 +1,7 @@
 
 body {
-    background-color: #ffffff !important;
-    color-scheme: light !important;
-    forced-color-adjust: none !important;
+  background-color: #ffffff !important; 
+  color: #333333 !important;           
 }
 .kegiatan-section {
   background-color: #ffffff !important;
