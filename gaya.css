@@ -1670,23 +1670,33 @@ text-align-last: center;
   }
 }
 @media screen and (max-width: 768px) {
-   .kegiatan-section::before {
-    content: "";
-    position: absolute;
+  /* Pastikan elemen induknya relative */
+  .kegiatan-section {
+    position: relative !important;
+    overflow: hidden !important; /* Supaya background tidak keluar jalur */
+  }
+
+  .kegiatan-section::before {
+    content: "" !important;
+    position: absolute !important;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     
-    background: url('bg2.png') no-repeat center center;
-    background-size: contain !important; 
+    /* 1. Pakai ./ agar GitHub tahu ini satu folder */
+    background-image: url('./bg2.png') !important; 
     
+    /* 2. Matikan fixed karena di HP sering bikin gambar ilang/blank */
+    background-attachment: scroll !important; 
     
-    background-attachment: fixed; 
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important; /* Gunakan cover biar penuh di HP */
     
-    background-color: #fff; 
-    opacity: 0.15;
-    z-index: 0;
+    opacity: 0.15 !important;
+    z-index: -1 !important; /* Ubah ke -1 agar tidak menutupi kartu kegiatan */
+    display: block !important;
   }
 }
 /* ===================================================
